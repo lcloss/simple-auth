@@ -14,7 +14,7 @@
                                                         <input class="form-control" id="inputFirstName" name="first_name" type="text" placeholder="{{ __('Enter your first name') }}" />
                                                         <label for="inputFirstName">{{ __('First name') }}</label>
                                                         @if( $errors->has('first_name') )
-                                                        <div class="invalid-feedback d-block">{{ $error->first('first_name') }}</div>
+                                                        <div class="invalid-feedback d-block">{{ $errors->first('first_name') }}</div>
                                                         @endif
                                                     </div>
                                                 </div>
@@ -23,7 +23,7 @@
                                                         <input class="form-control" id="inputLastName" name="last_name" type="text" placeholder="{{ __('Enter your last name') }}" />
                                                         <label for="inputLastName">{{ __('Last name') }}</label>
                                                         @if( $errors->has('last_name') )
-                                                        <div class="invalid-feedback d-block">{{ $error->first('last_name') }}</div>
+                                                        <div class="invalid-feedback d-block">{{ $errors->first('last_name') }}</div>
                                                         @endif
                                                     </div>
                                                 </div>
@@ -32,7 +32,7 @@
                                                 <input class="form-control" id="inputEmail" name="email" type="email" placeholder="{{ __('name@example.com') }}" />
                                                 <label for="inputEmail">{{ __('Email address') }}</label>
                                                 @if( $errors->has('email') )
-                                                <div class="invalid-feedback d-block">{{ $error->first('email') }}</div>
+                                                <div class="invalid-feedback d-block">{{ $errors->first('email') }}</div>
                                                 @endif
                                             </div>
                                             <div class="row mb-3">
@@ -41,7 +41,7 @@
                                                         <input class="form-control" id="inputPassword" name="password" type="password" placeholder="{{ __('Create a password') }}" />
                                                         <label for="inputPassword">{{ __('Password') }}</label>
                                                         @if( $errors->has('password') )
-                                                        <div class="invalid-feedback d-block">{{ $error->first('password') }}</div>
+                                                        <div class="invalid-feedback d-block">{{ $errors->first('password') }}</div>
                                                         @endif
                                                     </div>
                                                 </div>
@@ -50,7 +50,7 @@
                                                         <input class="form-control" id="inputPasswordConfirm" name="password_confirmation" type="password" placeholder="{{ __('Confirm password') }}" />
                                                         <label for="inputPasswordConfirm">{{ __('Confirm Password') }}</label>
                                                         @if( $errors->has('password_confirmation') )
-                                                        <div class="invalid-feedback d-block">{{ $error->first('password_confirmation') }}</div>
+                                                        <div class="invalid-feedback d-block">{{ $errors->first('password_confirmation') }}</div>
                                                         @endif
                                                     </div>
                                                 </div>

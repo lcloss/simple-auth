@@ -18,7 +18,7 @@
                                                         <input class="form-control" id="inputPassword" name="password" type="password" placeholder="Create a new password" />
                                                         <label for="inputPassword">Password</label>
                                                         @if( $errors->has('password') )
-                                                        <div class="invalid-feedback d-block">{{ $error->first('password') }}</div>
+                                                        <div class="invalid-feedback d-block">{{ $errors->first('password') }}</div>
                                                         @endif
                                                     </div>
                                                 </div>
@@ -27,7 +27,7 @@
                                                         <input class="form-control" id="inputPasswordConfirm" name="password_confirmation" type="password" placeholder="Confirm password" />
                                                         <label for="inputPasswordConfirm">Confirm Password</label>
                                                         @if( $errors->has('password_confirmation') )
-                                                        <div class="invalid-feedback d-block">{{ $error->first('password_confirmation') }}</div>
+                                                        <div class="invalid-feedback d-block">{{ $errors->first('password_confirmation') }}</div>
                                                         @endif
                                                     </div>
                                                 </div>
