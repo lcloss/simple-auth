@@ -54,13 +54,24 @@ With this package, you can Login, Register, Recover password and handle Email ve
         });
    
     ```
-
-5. Do the migrations with seed:
+ 
+5. Check the FortifyServiceProvider at `config/app.php`:
+    ```php
+    // config/app.php
+    'providers' => [
+        // ...
+        App\Fortify\FortifyServiceProvider::class,
+    ],
+    ```
+   
+6. Do the migrations with seed:
     ```bash
     php artisan migrate --seed
     ```
 
-6. Open your project in the browser and go to `/login` or `/register` to see the new views.
+7. Do the `npm install` and `npm run dev` commands.
+
+8. Open your project in the browser and go to `/login` or `/register` to see the new views.
 
 Tip: First registration will be the super user.
 

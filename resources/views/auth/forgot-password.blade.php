@@ -18,7 +18,7 @@
                                                 <input class="form-control" id="inputEmail" name="email" type="email" placeholder="{{ __('name@example.com') }}" />
                                                 <label for="inputEmail">{{ __('Email address') }}</label>
                                                 @if( $errors->has('email') )
-                                                <div class="invalid-feedback d-block">{{ $error->first('email') }}</div>
+                                                <div class="invalid-feedback d-block">{{ $errors->first('email') }}</div>
                                                 @endif
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
