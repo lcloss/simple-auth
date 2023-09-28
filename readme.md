@@ -25,32 +25,32 @@ With this package, you can Login, Register, Recover password and handle Email ve
     {
         /* Login */
         Fortify::loginView(function () {
-            return view('simple-auth::auth.login');
+            return view( config('simple-auth.views.login') );
         });
 
         /* Register */
         Fortify::registerView(function () {
-            return view('simple-auth::auth.register');
+            return view(config('simple-auth.views.register'));
         });
 
         // Forgot Password view
         Fortify::requestPasswordResetLinkView(function () {
-            return view('simple-auth::auth.forgot-password');
+            return view(config('simple-auth.views.forgot-password'));
         });
 
         // Reset password view
         Fortify::resetPasswordView(function ($request) {
-            return view('simple-auth::auth.reset-password', ['request' => $request]);
+            return view(config('simple-auth.views.reset-password'), ['request' => $request]);
         });
 
         // Verify email view
         Fortify::verifyEmailView(function () {
-            return view('simple-auth::auth.verify-email');
+            return view(config('simple-auth.views.verify-email'));
         });
 
         // Confirm password view
         Fortify::confirmPasswordView(function () {
-            return view('simple-auth::auth.confirm-password');
+            return view(config('simple-auth.views.confirm-password'));
         });
    
     ```
@@ -58,4 +58,8 @@ With this package, you can Login, Register, Recover password and handle Email ve
 ## Configuration
 
 You can change this package's configuration by editing the `config/simple-auth.php` file.
+
+## TODOs
+- [ ] Add tests
+- [ ] Add translations
 
