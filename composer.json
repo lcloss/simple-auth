@@ -1,0 +1,28 @@
+{
+    "name": "lcloss/simple-auth",
+    "description": "Auth screens for new Laravel project",
+    "type": "package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lcloss\\SimpleAuth\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lcloss\\SimpleAuth\\SimpleAuthServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "lcloss",
+            "email": "lcloss@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "laravel/fortify": "^1.18"
+    }
+}
