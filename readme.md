@@ -55,6 +55,15 @@ With this package, you can Login, Register, Recover password and handle Email ve
    
     ```
 
+5. Do the migrations with seed:
+    ```bash
+    php artisan migrate --seed
+    ```
+
+6. Open your project in the browser and go to `/login` or `/register` to see the new views.
+
+Tip: First registration will be the super user.
+
 ## Configuration
 
 You can change this package's configuration by editing the `config/simple-auth.php` file.
