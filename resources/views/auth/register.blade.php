@@ -8,10 +8,12 @@
                                     <div class="card-body">
                                         <form action="{{ route('register') }}" method="POST">
                                             @csrf
+                                            @include('simple-auth::partials.show-errors')
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" name="first_name" type="text" placeholder="{{ __('Enter your first name') }}" />
+                                                        <input class="form-control" id="inputFirstName" name="first_name" type="text" value="{{ old('first_name') }}"
+                                                               placeholder="{{ __('Enter your first name') }}" />
                                                         <label for="inputFirstName">{{ __('First name') }}</label>
                                                         @if( $errors->has('first_name') )
                                                         <div class="invalid-feedback d-block">{{ $errors->first('first_name') }}</div>
@@ -20,7 +22,8 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" name="last_name" type="text" placeholder="{{ __('Enter your last name') }}" />
+                                                        <input class="form-control" id="inputLastName" name="last_name" type="text" value="{{ old('last_name') }}"
+                                                               placeholder="{{ __('Enter your last name') }}" />
                                                         <label for="inputLastName">{{ __('Last name') }}</label>
                                                         @if( $errors->has('last_name') )
                                                         <div class="invalid-feedback d-block">{{ $errors->first('last_name') }}</div>
@@ -29,7 +32,8 @@
                                                 </div>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" name="email" type="email" placeholder="{{ __('name@example.com') }}" />
+                                                <input class="form-control" id="inputEmail" name="email" type="email" value="{{ old('email') }}"
+                                                       placeholder="{{ __('name@example.com') }}" />
                                                 <label for="inputEmail">{{ __('Email address') }}</label>
                                                 @if( $errors->has('email') )
                                                 <div class="invalid-feedback d-block">{{ $errors->first('email') }}</div>
@@ -38,7 +42,8 @@
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputPassword" name="password" type="password" placeholder="{{ __('Create a password') }}" />
+                                                        <input class="form-control" id="inputPassword" name="password" type="password"
+                                                               placeholder="{{ __('Create a password') }}" />
                                                         <label for="inputPassword">{{ __('Password') }}</label>
                                                         @if( $errors->has('password') )
                                                         <div class="invalid-feedback d-block">{{ $errors->first('password') }}</div>
@@ -47,7 +52,8 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputPasswordConfirm" name="password_confirmation" type="password" placeholder="{{ __('Confirm password') }}" />
+                                                        <input class="form-control" id="inputPasswordConfirm" name="password_confirmation"
+                                                               type="password" placeholder="{{ __('Confirm password') }}" />
                                                         <label for="inputPasswordConfirm">{{ __('Confirm Password') }}</label>
                                                         @if( $errors->has('password_confirmation') )
                                                         <div class="invalid-feedback d-block">{{ $errors->first('password_confirmation') }}</div>
