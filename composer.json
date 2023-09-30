@@ -25,5 +25,5 @@
     "require": {
         "laravel/fortify": "^1.18"
     },
-    "version": "0.0.3"
+    "version": "0.0.4"
 }
