@@ -55,6 +55,32 @@ With this package, you can Login, Register, Recover password and handle Email ve
    
     ```
  
+5. Create a user name from first and last names:
+
+Note that this version of registration screen came with First name and Last name.
+User's table has a `name` field, so you can use it to store the full name.
+
+Change the CreateNewUser action to create the name from first and last names:
+
+```php
+    // app/Actions/Fortify/CreateNewUser.php
+        Validator::make($input, [
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['nullable', 'string', 'max:255'],
+            'email' => [
+                'required',
+                'string',
+                'email',
+                'max:255',
+                Rule::unique(User::class),
+            ],
+            'password' => $this->passwordRules(),
+            'password_confirmation' => ['required', 'same:password'],
+        ])->validate();
+        
+        $name = trim($input['first_name'] . ' ' . $input['last_name']);
+```
+
 5. Check the FortifyServiceProvider at `config/app.php`:
     ```php
     // config/app.php
