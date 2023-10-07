@@ -86,7 +86,7 @@ Change the CreateNewUser action to create the name from first and last names:
     // config/app.php
     'providers' => [
         // ...
-        App\Fortify\FortifyServiceProvider::class,
+        App\Providers\FortifyServiceProvider::class,
     ],
     ```
    

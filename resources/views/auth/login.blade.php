@@ -1,8 +1,8 @@
 @extends( config('simple-auth.views.layouts.auth') )
 @section('title', __('Login'))
 @section('content')
-                        <div class="row justify-content-center">
-                            <div class="col-lg-5">
+                        <div class="row justify-content-center" style="margin-left: 25%; margin-right: 25%;">
+                            <div class="col-lg-12">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">{{ __('Login') }}</h3></div>
                                     <div class="card-body">
